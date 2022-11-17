@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FDEEDC;
+}
+
+/*Navbar Burger Menu Mobile Start */
+
+header {
+    background-color: #ffd384;
+    height: 150px;
+    display: grid;
+    align-items: center;
+}
+
+.heading-desk{
+    display: none;
+}
+
+.nav-branding img {
+    width: 150px;
+}
+
+.navbar {
+    min-height: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: relative;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hamburger {
+    display: block;
+    order: 2;
+}
+
+.nav-branding {
+    order: 1;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+    position: absolute;
+    left: -100%;
+    top: 150px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffd384;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+    width: 100%;
+}
+
+/* Navbar Burger Menu Mobile End */
+
+/* Bread Banner */
+
+.hero img {
+    width: 100%;
+    opacity: 50%;
+}
+
+.banner-2{
+    display: none;
+}
+
+.hero {
+    position: relative;
+    z-index: -1;
+}
+
+
+.hero h2,h1 {
+    z-index: 1;
+    opacity: 1;
+}
+
+.hero h1 {
+    position: absolute;
+    width: 100%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+.hero h2 {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 550;
+}
+/* Bread Banner End*/
+
+/* Artikel Start */
+
+.weekly-cake h3 {
+    font-size: 24px;
+    text-align: center;
+    padding: 30px 0 20px 0;
+    font-weight: 550;
+}
+
+.weekly-cake img {
+    width: 80%;
+    border-radius: 5px;
+    border: solid black 1px;
+}
+
+.weekly-cake{
+    margin: 0 auto;
+}
+
+.cake-img {
+    display: flex;
+    justify-content: center;
+}
+.weekly-text {
+    text-align: justify;
+}
+
+.weekly-cake p {
+    padding: 20px 0 0 0;
+    text-align-last: center;
+    width: 80%;
+    margin: 0 auto;
+    word-wrap: break-word;
+}
+
+.open {
+    text-align: center;
+    padding: 40px 0 0 0;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+.location {
+    text-align: center;
+    padding: 10px 0 0 0;
+    font-weight: 550;
+}
+
+.open-hours p {
+    text-align: center;
+    padding: 10px 0 0 0; 
+}
+
+.open-hours h4{
+    padding-top: 30px;
+}
+
+.open-hours h3 {
+    padding-top: 50px;
+}
+
+/*Artikel End*/
+
+
+/* Footer Start*/
+
+footer{
+    text-align: center;
+    background-color: #426a5a;
+    color: white;
+    margin-top: 40px; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer i{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Footer End*/
+
+/* Tablet Size */
+
+@media (min-width: 426px){
+
+    body{ 
+        width: 100%;
+    }
+
+    .hero h1{
+        font-size: 32px;
+    }
+
+    .hero h2{
+        font-size: 20px;
+    }
+
+    .cake-img{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .weekly-text p{
+        width: 56%;
+    }
+
+    header{
+        background-color: #ffd384;
+        display: grid;
+        align-items: center;
+    }
+
+    .navbar{
+        gap: 7rem;
+    }
+
+    .nav-branding{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .open-hours h3{
+        font-size: 32px;
+    }
+    
+    .open-hours h4{
+        font-size: 20px;
+    }
+    
+    main p{
+        font-size: 18px;
+    }
+    
+    footer p{
+        font-size: 18px;
+    }
+
+    footer i{
+        font-size: 30px;
+    }
+}
+
+/* Desktop Size */
+
+@media (min-width:821px){
+    
+    body{
+        width: 100%;
+    }
+
+  .empty{
+    display: none;
+  }
+
+  .navbar{
+    display: flex
+  }
+
+  .hamburger{
+    display: none;
+  }
+
+  .banner{
+    display: none;
+  }
+
+  .banner-2{
+    display: block;
+    opacity: 50%;
+    width: 100%;
+  }
+
+  .navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    order: 1;
+  }
+
+  header{
+    height: 100px;
+  }
+
+  .nav-branding img{
+    width: 100px;
+  }
+  
+  .nav-menu {
+    display:flex;
+    align-items: center;
+    gap: 40px;
+    left: 0%;
+    flex-direction: row;
+    position: static;
+    order: 2;
+    width: auto;
+    font-size: 16px;
+  }
+
+  .nav-link:hover {
+    background-color:#426a5a;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
+
+.open-hours {
+    color: white;
+    background-color: rgb(50, 50, 50);
+    padding-bottom: 10px;
+}
+
+.weekly-cake{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.cake-img{
+    order: 2;
+    width: 370px;
+    height: 300px;
+    justify-content: end;
+}
+
+.weekly-text{
+    order: 1;
+}
+
+.weekly-text p{
+    width: 90%;
+}
+
+.heading-mobile{
+    display: none;
+}
+
+.heading-desk{
+    display: block;
+    
+}
+
+.weekly-cake h3{
+    padding-top: 0;
+}
+
+.open-hours{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.location-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.hero h1{
+    font-size: 35px;
+}
+
+.hero h2{
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+footer{
+    margin: 0;
+}
+
+
+.navbar{
+    padding: 0 80px ;
+}
+
+}
+
+@media (min-width:1024px){
+
+    body{
+        width: 100%;
+    }
+
+    .navbar{
+        padding: 0 80px ;
+    }
+
+    .weekly-cake p {
+        text-align-last: left;
+    }
+
+    .cake-img{
+        order: 2;
+        width: 400px;
+        height: 330px;
+        justify-content: end;
+    }
+
+    .hero h1{
+        font-size: 45px;
+    }
+    
+    .hero h2{
+        font-size: 24px;
+        padding-top: 15px;
+    }
+
+    .location-grid{
+        width: 60%;
+    }
+}
+
+@media (min-width:1920px) {
+
+    body{
+        width: 1920px;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /mobilefirst *
+
+Allow: /public_html
+
+Sitemap: https://mobilefirst.tobiaswolmar.dk/sitemap.xml
